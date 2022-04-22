@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control{
+    width: 47%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    height: 100vh;
+
+}
+
+.register h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-size: 30px;
+
+}
+
+.register{
+    margin-right: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.control-img{
+    width: 53%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form-group.reg{
+    width: 100;
+    margin-top: 20px;
+}
+
+.form-group.reg label{
+    font-size: 14px;
+}
+
+.form-group.reg input{
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #5555551f;
+    margin-top: 7px;
+}
+
+.form-group.reg input:focus{
+    outline-style: none;
+}
+
+.form-group input{
+    padding: 10px;
+    width: 100%;
+}
+.control-register{
+    width: 100%;
+    margin: 7rem;
+}
+.control-register h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-size: 30px;
+}
+.control-register p{
+    font-size: 14px;
+    color: #555;
+}
+.gg-btn{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #5555551f;
+    margin-top: 3rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gg-btn a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    padding-left: 10px;
+}
+
+.l-text {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  color: rgba(0, 0, 0, 0.35);
+  margin: 8px 0;
+}
+.l-text span{
+    font-size: 12px;
+}
+.l-text::before,.l-text::after{
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 8px;
+}
+#btn-register{
+    background-color: rgb(99, 57, 255);
+    border: none;
+    border-radius : 15px;
+    padding: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+#btn-register:hover{
+
+    cursor: pointer;
+}
+
+.error{
+    color: red;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-top : 10px;
+}
+.success{
+    color: green;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-top : 10px;
+
+}
+
+.agree{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+}
+.agree a,.agree span{
+    padding-left: 6px;
+    font-size: 13px;
+}
+
+.sign-in{
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 20px;
+}
+
+.sign-in a,.agree a{
+    text-decoration: none;
+    color: rgb(99, 57, 255);
+}
+
+.msg{
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+}
+.success-line{
+    outline-style: solid;
+    outline-color: green;
+    outline-width: 1px;
+}
+.error-line{
+    outline-style: solid;
+    outline-color: red;
+    outline-width: 1px;
+}
+.form-group.btn{
+    margin-top: 1rem;
+}
+.alert h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: green;
+}
+.alert h3{
+    margin-top: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+    color: green;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .control-img{
+        display: none;
+    }
+    .control{
+        margin-top: 1rem;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .control{
+        width: 100%;
+    }
+}
