@@ -1,6 +1,11 @@
 <?php 
 $PROFILE = null;
+session_start(); 
 require_once("dbconnect.php");
+
+if(isset($_SESSION['profile'])){
+    header("Location: index.php");
+}
 
 ?>
 <!DOCTYPE html>
