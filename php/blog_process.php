@@ -53,10 +53,10 @@ if(isset($_GET['cmd'])){
             exit();
         }
     }else if($cmd == "edit_blog"){
-        if(isset($_GET['id']) && isset($_SESSION['profile'])){
+        if(isset($_GET['id']) && isset($_SESSION['profile']) && isset($_GET['user_id'])){
             $obj = array();
             $obj['id'] = $_GET['id'];
-            $obj['user_id'] = $_SESSION['profile'][0]['user_id'];
+            $obj['user_id'] = $_GET['user_id'];
             $data = queryMode("edit_blog",$obj);
             $res['status'] = "success";
             $res['data'] = $data;
@@ -71,11 +71,11 @@ if(isset($_GET['cmd'])){
 }else if(isset($_POST['cmd'])){
     $cmd = $_POST['cmd'];
     if($cmd == "create_blog"){
-        if(isset($_POST['topic']) && isset($_POST['content']) && isset($_FILES['file']) && $_SESSION['profile']){
+        if(isset($_POST['topic']) && isset($_POST['content']) && isset($_FILES['file']) && $_SESSION['profile'] && isset($_POST['user_id'])){
             $obj = array();
             $obj['topic'] = $_POST['topic'];
             $obj['content'] = $_POST['content'];
-            $obj['user_id'] = $_SESSION['profile'][0]['user_id'];
+            $obj['user_id'] = $_POST['user_id'];
             $obj['start_id'] = $_POST['start_id'];
             $file = $_FILES['file'];
             $obj['path'] = uploadImg($file);     
@@ -91,12 +91,12 @@ if(isset($_GET['cmd'])){
             exit();
         }
     }else if($cmd == "update_blog"){
-        if(isset($_POST['id']) && isset($_POST['content']) && isset($_POST['topic']) && isset($_SESSION['profile'])){
+        if(isset($_POST['id']) && isset($_POST['content']) && isset($_POST['topic']) && isset($_SESSION['profile']) && isset($_POST['user_id'])){
             $obj = array();
             $obj['id'] = $_POST['id'];
             $obj['topic'] = $_POST['topic'];
             $obj['content'] = $_POST['content'];
-            $obj['user_id'] = $_SESSION['profile'][0]['user_id'];
+            $obj['user_id'] = $_POST['user_id'];
             if (isset($_FILES['file'])) {
                 $file = $_FILES['file'];
                 $obj['path'] = uploadImg($file);

@@ -2,7 +2,7 @@ var last_id = -1;
 var start_id = -1;
 var user_id;
 if (PROFILE != null || undefined){
-	user_id = PROFILE[0]['user_id'];
+	user_id = PROFILE[0];
 }
 $(document).ready(function(){
 	$(".btn-c").click(function(){
@@ -62,6 +62,7 @@ function createBlog(){
 		fd.append('content',$("#content-c").val());
 		fd.append('start_id',start_id);
 		fd.append('cmd',"create_blog");
+		fd.append('user_id',user_id);
        	if (!is_error) {
        		// $("#btn-create").attr("disabled",true);
        		$.ajax({
@@ -116,6 +117,7 @@ function editBlog(id){
 	var check_edit = {};
 	check_edit['cmd'] = "edit_blog";
 	check_edit['id'] = id;
+	check_edit['user_id'] = user_id;
 
 	$.ajax({
 		url : "php/blog_process.php",
@@ -329,6 +331,8 @@ function updateBlog(id){
     fd.append('topic',$("#topic_up").val());
     fd.append('id',id);
     fd.append('cmd',"update_blog");
+	fd.append('user_id',user_id);
+
 
     if (!is_error) {
     	// $("#btn-update").attr("disabled",true);
